@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  server:
+     image: generic-ntier/nginx-vanilla
+     build:
+       context: .
+       dockerfile: Dockerfile_nginx
+     ports:
+     - "8080:80"
+     environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
