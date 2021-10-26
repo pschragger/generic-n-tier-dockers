@@ -1,0 +1,10 @@
+FROM tomcat
+RUN sed '/<\/Host>/ i <Context docBase="/usr/local/static" path="/static" />'  /usr/local/tomcat/conf/server.xml > /tmp/server.xml
+RUN  cp /usr/local/tomcat/conf/server.xml /usr/local/tomcat/conf/server.xml.old
+RUN  cp /tmp/server.xml /usr/local/tomcat/conf/server.xml
+RUN  mkdir /usr/local/static
+COPY index.html /usr/local/static/
+
+
+
+

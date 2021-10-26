@@ -1,10 +1,10 @@
 version: "3.9"  # optional since v1.27.0
 services:
   server:
-     image: generic-ntier/nginx-vanilla
+     image: generic-ntier/nginx-staticonly
      build:
        context: .
-       dockerfile: Dockerfile_nginx
+       dockerfile: Dockerfile_nginx_staticonly
      ports:
      - "8080:80"
      environment:

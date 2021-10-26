@@ -1,9 +1,9 @@
 version: "3.9"  # optional since v1.27.0
 services:
   server:
-     image: generic-ntier/apache-vanilla
+     image: generic-ntier/apache-staticonly
      build:
        context: .
-       dockerfile: Dockerfile_apache
+       dockerfile: Dockerfile_apache_staticonly
      ports:
      - "8081:80"

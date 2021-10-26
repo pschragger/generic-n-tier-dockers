@@ -14,6 +14,6 @@ For the two-tier servers fill in the following info.  If you use the local deplo
 | --- | --- |
 | 8080:80 | NGINX   vanilla - static only |
 | 8081:80 | apache  vanilla - static only |
-| 8082:80 | tomcat  vanilla - static only |
-| 8083:80 | glassfish vanilla - static only |
+| 8888:8080 | tomcat  vanilla - static only |
+
 
