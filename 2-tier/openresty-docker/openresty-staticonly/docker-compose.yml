@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  server:
+     image: generic-ntier/openresty-staticonly
+     build:
+       context: .
+       dockerfile: Dockerfile_openresty_staticonly
+     ports:
+     - "8083:80"
+     environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80

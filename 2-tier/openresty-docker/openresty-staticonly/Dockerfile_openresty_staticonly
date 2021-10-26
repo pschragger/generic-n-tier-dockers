@@ -1,0 +1,2 @@
+FROM openresty/openresty
+COPY static-html-directory /usr/share/openresty/html
