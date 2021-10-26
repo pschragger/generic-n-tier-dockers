@@ -14,12 +14,18 @@ The idea is that you can cd to the directory of the docker you wish do deploy an
 to build and deploy the docker image.  Please note that in the future the builds may fail if the docker base images move.
 
 
-### Static only dockers 
-For the two-tier servers fill in the following info.  If you use the local deploy then you can keep them all running to test. 
+### 2-tier Dockers
+
+A 2-tier application is implementing a client/server model webservice.  The client tier consists of a process on the requestors machine and is usually a webrowser.  The server tier is a process that listens for requests and returns a result to the requestor.  The server is can be listening to a tcp or udp socket. Most web servers are implementing the http protocol and therefor listening on an tcp port for an http request.
+
+#### static-only server dockers
+The idea of a static only server is to provide content that does not change by the processing of a request.  The content may change in the future and may need to have the local caches on the client side cleared inorder for the new content to be retrieved.
+
+For the two-tier static only server port numbers are assigned below so that the local deploy can keep them all running to test. 
 | LOCAL:DOCKER | server |  Start URL |
 | --- | --- | --- |
 | 8080:80 | NGINX  - static only | http://localhost:8080 |
 | 8081:80 | apache  - static only | http://localhost:8081 |
-| 8888:8080 | tomcat - static only | http://localhost:8888/static |
 | 8083:80 | openresty - satic only | http://localhost:8083 |
+| 8888:8080 | tomcat - static only | http://localhost:8888/static |
 
