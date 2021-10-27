@@ -1,0 +1,18 @@
+# tomcat docker setup as application server
+
+sample.war was copied from
+https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/
+
+samplewebapp.war
+https://www.middlewareinventory.com/blog/sample-web-application-war-file-download/
+
+Both needed tomcat 7.0 to run. To access applications use the following URLS:
+
+http:/localhost:8889/sample
+
+http://localhost:8889/SampleWebApp
+
+
+All of this is deployed using command:
+
+docker-compose up --build

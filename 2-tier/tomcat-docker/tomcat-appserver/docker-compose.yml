@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  server:
+     image: generic-ntier/tomcat-appserver
+     build:
+       context: .
+       dockerfile: Dockerfile_tomcat_appserver
+     ports:
+     - "8889:8080"
+

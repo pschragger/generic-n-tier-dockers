@@ -1,0 +1,11 @@
+FROM tomcat:7.0
+# had to revert to tomcat 7 to run these apps
+# From  https://tomcat.apache.org/
+# tomcat 10 and above moved servlet code to jakarta jars
+# deploy applications to tomcat
+COPY sample.war /usr/local/tomcat/webapps/
+COPY SampleWebApp.war /usr/local/tomcat/webapps/
+
+
+
+
