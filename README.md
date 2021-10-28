@@ -1,5 +1,5 @@
 # generic-n-tier-dockers 
-Dockers for created and n-tier service
+Example dockers for creating n-tier service deployments.  The builds will depend on docker-compose and docker and perhaps kubernetes when I get to cluster deployments
 
 The idea is to setup deploy scripts for various multi-tiered application setups to speed up intial creation of n-tier services.
 
@@ -8,10 +8,11 @@ Starting with local docker deployed services for development and local testing a
 ## Adding example dockers
 
 Create a new branch in this repo to start creating a new example.
-Since we are setting this up on the same machine we should try to keep the exposed ports from overlapping.  The mapping is the local port to the docker port.
+Since we are setting up development environments on the same machine we should try to keep the exposed ports from overlapping.  
+The mapping is the local port to the docker port.
 
-The idea is that you can cd to the directory of the docker you wish do deploy and run the command: docker-compose up --build
-to build and deploy the docker image.  Please note that in the future the builds may fail if the docker base images move.
+The idea is that you can cd to the directory of n-tier service docker you wish do deploy and run the command: docker-compose up --build
+to build and deploy the docker images.  Please note that in the future the builds may fail if the docker base images move.
 
 
 ### 2-tier Dockers
@@ -37,6 +38,7 @@ The focus is on servers that deliver dynamic content with and/or without a datab
 | --- | --- | --- | --- |
 | 9080:80 | NGINX  -  applicaiton server | http://localhost:9080 | not implemented |
 | 9081:80 | apache  - application server(CGI) | http://localhost:9081 |not implemented |
+| 9081:80 | apache  - application server(php) | http://localhost:9081 |not implemented |
 | 9083:80 | openresty - application server | http://localhost:9083 |not implemented |
 | 9888:8080 | tomcat - application server | http://localhost:9888/ |not implemented |
 | 9889:8080 | ruby - application server | http://localhost:9889/ |not implemented |
