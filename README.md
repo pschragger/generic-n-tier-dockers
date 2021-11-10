@@ -32,9 +32,8 @@ For the two-tier static only server port numbers are assigned below so that the 
 
 #### application servers
 The focus is on servers that deliver dynamic content with and/or without a database.
-
 | LOCAL:DOCKER | server |  Start URL | Status |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | 9080:80 | NGINX  -  applicaiton server | http://localhost:9080 | not implemented |
 | 9081:80 | apache  - application server(CGI) | http://localhost:9081 |not implemented |
 | 9083:80 | openresty - application server | http://localhost:9083 |not implemented |
